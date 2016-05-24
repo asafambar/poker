@@ -1,0 +1,31 @@
+<my-card
+[active]="card.active" 
+[card] = "card"  
+[py] = "card.py" 
+[px] = "card.px" 
+[pz] ="card.pz" 
+[name] = "card.name" 
+[game] = "game" 
+*ngFor= "let card of game.cards">
+</my-card>
+
+<button  (click)="addPlyar()" [hidden]="stopPlaying">
+	Add Player
+</button>
+
+<button  (click)="removePlyar()" [hidden]="stopPlaying">
+	Remove Player
+</button>
+
+<button (click) = "startGame()" [hidden]= "startPlaying">
+	Start
+</button>
+<button  (click) = "init()" [hidden]= "startPlaying">
+	Init
+</button>
+<button (click) = "controlFlop()" [hidden]= "secondFlopButton">
+	Flop
+</button>
+
+<my-hand [name] = "hand.name"  [py] = "hand.py" [px] = "hand.px" *ngFor= "let hand of game.hands">
+</my-hand>

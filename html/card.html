@@ -1,0 +1,9 @@
+<div class="flip-container"  [ngStyle]=
+"{'z-index':pz,'transform':'translate('+px+'px,'+py+'px)'}" [ngClass] = "{hover:active}">
+	<div class="flipper">
+		<div class="front" [ngStyle]="{'background-image':'url(/cards/'+name+'.svg)'}">	
+		</div>
+		<div class="back" style ="background-image:url(/cards/back2.png)">	
+		</div>
+	</div>
+</div>
